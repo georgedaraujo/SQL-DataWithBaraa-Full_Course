@@ -1,0 +1,13 @@
+# ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator (SQL Server)
+
+[Message example] Msg 104, Level 16, State 1, Line 8
+ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator.
+
+[Solution] Check your SQL statement – you’ve probably omitted a column from your SELECT list.
+
+As the error message implies, you’ll probably only see this error if you’re running a query that contains a UNION, INTERSECT or EXCEPT operator.
+
+Simply adding the column to your SELECT list should fix the problem.
+
+
+--------------------------------------------------------------------------------------------------------------
