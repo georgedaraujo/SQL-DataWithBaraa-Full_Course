@@ -8,5 +8,6 @@ SELECT
 	OrderID,
 	ProductID,
 	OrderStatus,
-	SUM(Sales) OVER(PARTITION BY ProductID, OrderStatus) AS SalesByPrdStatus 
+	Sales,
+	SUM(Sales) OVER(PARTITION BY ProductID, OrderStatus ORDER BY OrderStatus) AS SalesByPrdStatus
 FROM Sales.Orders
